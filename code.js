@@ -41,7 +41,7 @@ const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 function FromKeywords(s) {
 	let temp = s.replace("1 bragging points", "1 bragging point")
 				.replace("1 Joined before shop badges", "Joined before shop")
-	return ((emojiImgs) ? temp.replace("&I", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499331811969859595.png?v=1>") // AAAAA
+	return ((document.getElementById("emojiHandling").value == "Images") ? temp.replace("&I", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499331811969859595.png?v=1>") // AAAAA
 							  .replace("&J", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499331820563988521.png?v=1>")
 							  .replace("&!Y","<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499332067918610437.png?v=1>")
 							  .replace("&Y", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499332054190784522.png?v=1>")
@@ -61,7 +61,8 @@ function FromKeywords(s) {
 							  .replace("&W", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/499331984699424799.png?v=1>")
 							  .replace("&emoji", "<img class=\"emoji\" src=https://cdn.discordapp.com/emojis/340669253135106050.png?v=1>")
 						
-						 :temp.replace("&I", "I Pentominoes").replace("1 I Pentominoes", "1 I Pentomino") // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+						 :((document.getElementById("emojiHandling").value == "Text") ?
+						 (temp.replace("&I", "I Pentominoes").replace("1 I Pentominoes", "1 I Pentomino") // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 							  .replace("&J", "J Pentominoes").replace("1 J Pentominoes", "1 J Pentomino")
 							  .replace("&!Y","Y' Pentominoes").replace("1 Y' Pentominoes", "1 Y' Pentomino")
 							  .replace("&Y", "Y Pentominoes").replace("1 Y Pentominoes", "1 Y Pentomino")
@@ -79,7 +80,26 @@ function FromKeywords(s) {
 							  .replace("&!N","N' Pentominoes").replace("1 N' Pentominoes", "1 N' Pentomino")
 							  .replace("&Z", "Z Pentominoes").replace("1 Z Pentominoes", "1 Z Pentomino")
 							  .replace("&W", "W Pentominoes").replace("1 W Pentominoes", "1 W Pentomino")
-							  .replace("&emoji", "\ud83d\ude02"))//.replace(", \ud83c\udf3a", "\ud83c\udf3a").replace(", \ud83d\udc90", "\ud83d\udc90")
+							  .replace("&emoji", "\ud83d\ude02"))
+						:(temp.replace("&I", ":5I_:") // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+							  .replace("&J", ":5J_:")
+							  .replace("&!Y",":5Y_m:")
+							  .replace("&Y", ":5Y_:")
+							  .replace("&!J",":5J_m:")
+							  .replace("&N", ":5N_:")
+							  .replace("&V", ":5V_:")
+							  .replace("&P", ":5P_:")
+							  .replace("&C", ":5C_:")
+							  .replace("&!Z",":5Z_m:")
+							  .replace("&F", ":5F_:")
+							  .replace("&T", ":5T_:")
+							  .replace("&!P",":5P_m:")
+							  .replace("&X", ":5X_:")
+							  .replace("&!F",":5F_m:")
+							  .replace("&!N",":5N_m:")
+							  .replace("&Z", ":5Z_:")
+							  .replace("&W", ":5W_:")
+							  .replace("&emoji", ":what:"))))
 }
 function User(username, items) {
 	this.username = username
@@ -151,7 +171,6 @@ function userSort (users) {
             result[j-1] = result[j];
             result[j] = temp;
          } else if (result[j-1][0].equalTo(result[j][0])) {
-			 //result[j-1][1] = true
 			 result[j][1] = true
 		 }
       }
@@ -159,7 +178,6 @@ function userSort (users) {
 	return result
 }
 function UpdateScores() {
-	emojiImgs = document.getElementById("imgemojis").checked
 	document.getElementById("stxt").innerHTML = "Sunflower val. = " + document.getElementById("sun").value + ", New value = "
 	document.getElementById("htxt").innerHTML = "Hibiscus val. = " + document.getElementById("hib").value + ", New value = "
 	document.getElementById("btxt").innerHTML = "Bouquet val. = " + document.getElementById("bou").value + ", New value = "

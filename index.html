@@ -22,7 +22,16 @@
 				<td><input type="number" id="bou" value=100></td>
 			</tr>
 			<tr>
-				<td>Use images for items <input type="checkbox" name="emojimgs" id="imgemojis" checked></td>
+				<td>Handling custom emoji:</td>
+			</tr>
+			<tr>
+				<td>
+					<select id="emojiHandling">
+						<option value="Images">Emoji images</option>
+						<option value="Text">Text with emoji</option>
+						<option value="Discord">Discord emoji</option>
+					</select>
+				</td>
 			</tr>
 			<tr>
 				<td><input type="button" onclick=UpdateScores() value="Update"></td>
