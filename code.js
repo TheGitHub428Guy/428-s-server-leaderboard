@@ -118,15 +118,16 @@ function User(username, items) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [1775, 81, 13]))
+userList.push(new User("Reidolol", [1775, 84, 13]))
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
-userList.push(new User("Milo Jacquet", [2124, 71, 5]))
+userList[userList.length - 1].addItems(0, 72)
+userList.push(new User("Milo Jacquet", [2184, 76, 9]))
 userList[userList.length - 1].addItems(7, 1)
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2004, 40, 6, 0, 1, 10]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2134, 44, 6, 0, 1, 3]))
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
-userList.push(new User("Layle", [1300, 79, 6]))
+userList.push(new User("Layle", [1346, 79, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList.push(new User("Denc", [191, 0, 0, 1, 0, 0, 1, 1]))
 userList.push(new User("AAAAAAAAA", [140, 5, 0, 0, 0, 0, 0, 1]))
