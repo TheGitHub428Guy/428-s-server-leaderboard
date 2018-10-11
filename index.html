@@ -10,16 +10,19 @@
 	<form>
 		<table>
 			<tr>
-				<td><p id="stxt">Sunflower val. = 1, New value = </p></td>
+				<td><p id="stxt" class="ftxt">Sunflower val. = 1, New value = </p></td>
 				<td><input type="number" id="sun" value=1></td>
 			</tr>
 			<tr>
-				<td><p id="htxt">Hibiscus val. = 10, New value = </p></td>
+				<td><p id="htxt" class="ftxt">Hibiscus val. = 10, New value = </p></td>
 				<td><input type="number" id="hib" value=10></td>
 			</tr>
 			<tr>
-				<td><p id="btxt">Bouquet val. = 100, New value = </p></td>
+				<td><p id="btxt" class="ftxt">Bouquet val. = 100, New value = </p></td>
 				<td><input type="number" id="bou" value=100></td>
+			</tr>
+			<tr>
+				<td>Use images for items <input type="checkbox" name="emojimgs" id="imgemojis" checked></td>
 			</tr>
 			<tr>
 				<td><input type="button" onclick=UpdateScores() value="Update"></td>
@@ -27,6 +30,7 @@
 		</table>
 	</form>
 <!--IT'S BEAUTIFUL-->
-	<p id="scores">Leaderboard coming soon! </p>
+	<p id="scores">hi</p>
+	<script>UpdateScores()</script>
 </body>
 </html>
