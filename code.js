@@ -146,10 +146,11 @@ userList[userList.length - 1].addItems(0, 41) // added 10/12/2018
 userList.push(new User("Milo Jacquet", [2184, 76, 9]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 35) // added 10/12/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2134, 44, 6, 0, 1, 3]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2134, 44, 6, 0, 1, 0]))
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 23) // added 10/12/2018
+userList[userList.length - 1].addItems(0, 31) // added 10/12/2018
 userList.push(new User("Layle", [1346, 79, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 23) // added 10/12/2018
