@@ -159,7 +159,6 @@ userList.push(new User("AAAAAAAAA", [140, 5, 0, 0, 0, 0, 0, 1]))
 userList.push(new User("fabric", [113, 3]))
 userList.push(new User("yes", [10, 5]))
 
-userList.push(new User("Coliop", [10]))
 userList.push(new User("TWSICommunity", [10]))
 userList.push(new User("\u03C2\u03C3\u03C2\u03B1\u03B9\u03B7\u03B5 \u03C2\u03BF\u03BF\u03BA\u03B9\u03B5", [10]))
 userList.push(new User("jk", [10]))
