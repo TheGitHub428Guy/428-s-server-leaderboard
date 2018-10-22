@@ -1,6 +1,6 @@
 body {background: #292929; white-space: nowrap; color: #FFFFFF}
 * {font-family: "Lucida Console", Monaco, monospace}
 .ftxt {text-align:right}
-.emoji {height: 16px}
+.emoji {height: 15px}
 .username {background-color: rgba(114, 137, 218, .1); color: #7289da}
 /* i did a compact thing */
