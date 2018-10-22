@@ -21,31 +21,31 @@ const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 			            // [Pentominoes]
 			   "&I",    // I [ID 8]
 			   "&J",    // J [9]
-			   "&!Y",   // Y'[10]
+			   "&Y'",   // Y'[10]
 			   "&Y",    // Y [11]
-			   "&!J",   // J'[12]
+			   "&J'",   // J'[12]
 			   "&N",    // N [13]
 			   "&V",    // V [14]
 			   "&P",    // P [15]
 			   "&C",    // C [16]
-			   "&!Z",   // Z'[17]
+			   "&Z'",   // Z'[17]
 			   "&F",    // F [18]
 			   "&T",    // T [19]
-			   "&!P",   // P'[20]
+			   "&P'",   // P'[20]
 			   "&X",    // X [21]
-			   "&!F",   // F'[22]
-			   "&!N",   // N'[23]
+			   "&F'",   // F'[22]
+			   "&N'",   // N'[23]
 			   "&Z",    // Z [24]
 			   "&W"     // W [25]
 			   ]
 function FromKeywords(s) {
 	let temp = s.replace("1 bragging points", "1 bragging point")
 				.replace("1 Joined before shop badges", "Joined before shop")
-	return ((document.getElementById("emojiHandling").value == "Images") ? temp.replace(/&!([^,\s])+/gm, "&$1'").replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png>")
+	return ((document.getElementById("emojiHandling").value == "Images") ? temp.replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png>")
 						 :((document.getElementById("emojiHandling").value == "Text") ?
-						 (temp.replace(/&!([^,\s])+/gm, "&$1'").replace(/&([^,\s]+)/gm, "$1 Pentominoes")
+						 (temp.replace(/&([^,\s]+)/gm, "$1 Pentominoes")
 						 .replace(/(?<=\D)1(\D+?)Pentominoes/gm, "1$1Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02"))
-						:(temp.replace("&emoji", ":what:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5!(.)_:/gm, ":5$1_m:"))))
+						:(temp.replace("&emoji", ":what:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5(.)'_:/gm, ":5$1_m:"))))
 }
 function User(username, items) {
 	this.username = username
