@@ -36,7 +36,9 @@ const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 			   "&F'",   // F'[22]
 			   "&N'",   // N'[23]
 			   "&Z",    // Z [24]
-			   "&W"     // W [25]
+			   "&W",    // W [25]
+			   "&pmpkn", // Pumpkin [26]
+			   "\uD83C\uDF83" // SPOOKY Pumpkin [27]
 			   ]
 function FromKeywords(s) {
 	let temp = s.replace("1 bragging points", "1 bragging point")
@@ -44,8 +46,8 @@ function FromKeywords(s) {
 	return ((document.getElementById("emojiHandling").value == "Images") ? temp.replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png>")
 						 :((document.getElementById("emojiHandling").value == "Text") ?
 						 (temp.replace(/&([^,\s]+)/gm, "$1 Pentominoes")
-						 .replace(/(\D)1(\D+?)Pentominoes/gm, "$11$2Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02"))
-						:(temp.replace("&emoji", ":what:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5(.)'_:/gm, ":5$1_m:"))))
+						 .replace(/(\D)1(\D+?)Pentominoes/gm, "$11$2Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02")).replace(/pmpkn Pentominoe?(s)?/gm, "Pumpkin$1").replace("1 Pumpkins", "1 Pumpkin")
+						:(temp.replace("&emoji", ":what:").replace("&pmpkn", ":pumpkin:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5(.)'_:/gm, ":5$1_m:"))))
 }
 function User(username, items) {
 	this.username = username
@@ -91,10 +93,13 @@ userList[userList.length - 1].addItems(0, 72)
 userList[userList.length - 1].addItems(0, 41) // added 10/12/2018
 userList[userList.length - 1].addItems(0, 40) // added 10/19/2018
 userList[userList.length - 1].addItems(0, 50) // added 10/26/2018
+userList[userList.length - 1].addItems(0, 21)  // added 10/31/2018
+userList[userList.length - 1].addItems(1, 4)   // added 10/31/2018
 userList.push(new User("Milo Jacquet", [2184, 76, 13]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 85) // added 10/12/2018 + 10/19/2018
 userList[userList.length - 1].addItems(0, 45) // added 10/26/2018
+userList[userList.length - 1].addItems(0, 31) // added 10/31/2018
 userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2237, 34, 9, 0, 1, 0]))
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
@@ -102,15 +107,18 @@ userList[userList.length - 1].addItems(0, 23) // added 10/12/2018
 userList[userList.length - 1].addItems(0, 31) // added 10/12/2018
 userList[userList.length - 1].addItems(0, 75) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 9)  // added 10/26/2018
+userList[userList.length - 1].addItems(0, 32) // added 10/31/2018
 userList.push(new User("Layle", [1346, 79, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 23) // added 10/12/2018
 userList[userList.length - 1].addItems(0, 41) // added 10/19/2018
 userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
+userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList.push(new User("Denc", [191, 0, 0, 1, 0, 0, 1, 1]))
 userList.push(new User("AAAAAAAAA", [140, 5, 0, 0, 0, 0, 0, 1]))
 userList[userList.length - 1].addItems(0, 12) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 5)  // added 10/26/2018
+userList[userList.length - 1].addItems(0, 31) // sfsfsfsfsfsfs 10/31/2018
 userList.push(new User("fabric", [113, 3]))
 userList.push(new User("yes", [10, 5]))
 
