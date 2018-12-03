@@ -86,11 +86,11 @@ function User(username, items) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2101, 94, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Reidolol", [2131, 99, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 69) // lol 11/9/2018
-userList.push(new User("Milo Jacquet", [2467, 80, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Milo Jacquet", [2484, 80, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 75) // +ed 11/9/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2357, 38, 9, 0, 1, 0])) // this is weirdoverse
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2418, 38, 9, 0, 1, 0])) // this is weirdoverse
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 23) // added 10/12/2018
@@ -102,7 +102,7 @@ userList[userList.length - 1].addItems(0, 73) // 11/9/2018
 userList.push(new User("Layle", [1368, 79, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 46) // added 10/12/2018 and 11/9/2018
-userList[userList.length - 1].addItems(0, 94) // added 10/19/2018 and 11/26/2018
+userList[userList.length - 1].addItems(0, 129) // added 10/19/2018 and 11/26/2018 and 12/3/2018
 userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
 userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList.push(new User("Denc", [191, 0, 0, 1, 0, 0, 1, 1]))
