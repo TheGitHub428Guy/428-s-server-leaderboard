@@ -6,39 +6,23 @@
 	<script src="code.js"></script>
 </head>
 <body>
-<!--IT'S BEAUTIFUL-->
-	<form>
-		<table>
-			<tr>
-				<td><p id="stxt" class="ftxt">Sunflower val. = 1, New value = </p></td>
-				<td><input type="number" id="sun" value=1 onchange=UpdateScores()></td>
-			</tr>
-			<tr>
-				<td><p id="htxt" class="ftxt">Hibiscus val. = 10, New value = </p></td>
-				<td><input type="number" id="hib" value=10 onchange=UpdateScores()></td>
-			</tr>
-			<tr>
-				<td><p id="btxt" class="ftxt">Bouquet val. = 100, New value = </p></td>
-				<td><input type="number" id="bou" value=100 onchange=UpdateScores()></td>
-			</tr>
-			<tr>
-				<td>Handling custom emoji:</td>
-			</tr>
-			<tr>
-				<td>
-					<select id="emojiHandling" onchange=UpdateScores()>
-						<option value="Images">Emoji images</option>
-						<option value="Text">Text with emoji</option>
-						<option value="Discord">Discord emoji</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><input type="button" onclick=UpdateScores() value="Update (if auto-update doesn't work)"></td>
-			</tr>
-		</table>
-	</form>
-<!--IT'S BEAUTIFUL-->
+	<p id="stxt" class="ftxt">Sunflower val. = </p>
+	<input type="number" id="sun" value=1 onchange=UpdateScores()>
+	<br>
+	<p id="htxt" class="ftxt">Hibiscus val. = </p>
+	<input type="number" id="hib" value=10 onchange=UpdateScores()>
+	<br>
+	<p id="btxt" class="ftxt">  Bouquet val. = </p>
+	<input type="number" id="bou" value=100 onchange=UpdateScores()>
+	<br>
+	<span id="small">(You can type in the boxes to change the value!)</span><br>
+	Handling custom emoji: 
+	<select id="emojiHandling" onchange=UpdateScores()>
+		<option value="Images">Emoji images</option>
+		<option value="Text">Text with emoji</option>
+		<option value="Discord">Discord emoji</option>
+	</select><br>
+	<button type="button" onclick=UpdateScores()>Manual update</button>
 	<p id="scores">hi</p>
 	<script>UpdateScores()</script>
 </body>

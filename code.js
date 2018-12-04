@@ -138,9 +138,6 @@ function userSort (users) {
 	return result
 }
 function UpdateScores() {
-	document.getElementById("stxt").innerHTML = "Sunflower val. = " + document.getElementById("sun").value + ", New value = "
-	document.getElementById("htxt").innerHTML = "Hibiscus val. = " + document.getElementById("hib").value + ", New value = "
-	document.getElementById("btxt").innerHTML = "Bouquet val. = " + document.getElementById("bou").value + ", New value = "
 	let result = [userSort(userList), []]
 	let j = 0
 	for (let i = 0; i < userList.length; i++) {
