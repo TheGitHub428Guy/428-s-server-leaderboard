@@ -86,11 +86,11 @@ function User(username, items) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2131, 99, 17, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Reidolol", [2250, 99, 17, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 228) // lol 11/9/2018 12/9/2018 12/16/2018
-userList.push(new User("Milo Jacquet", [2630, 80, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Milo Jacquet", [2715, 83, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 75) // +ed 11/9/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2480, 38, 9, 0, 1, 0])) // this is weirdoverse
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2563, 46, 9, 0, 1, 0])) // this is weirdoverse
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 78) // added 10/12/2018 & 12/16/2018
@@ -99,15 +99,15 @@ userList[userList.length - 1].addItems(0, 75) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 14) // added 10/26/2018 & 12/16/2018
 userList[userList.length - 1].addItems(0, 32) // added 10/31/2018
 userList[userList.length - 1].addItems(0, 73) // 11/9/2018
-userList.push(new User("Layle", [1407, 84, 6]))
+userList.push(new User("Layle", [1407, 89, 6]))
 userList[userList.length - 1].addItems(7, 1)
-userList[userList.length - 1].addItems(0, 46) // added 10/12/2018 and 11/9/2018
+userList[userList.length - 1].addItems(0, 79) // added 10/12/2018 and 11/9/2018
 userList[userList.length - 1].addItems(0, 129) // added 10/19/2018 and 11/26/2018 and 12/3/2018
 userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
 userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList[userList.length - 1].addItems(0, 57) // ggggggggggggggggggggggggggggggggg 12/9/2018
-userList.push(new User("Denc", [191, 9, 0, 1, 0, 0, 1, 1]))
-userList.push(new User("AAAAAAAAA", [219, 5, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("Denc", [211, 9, 0, 1, 0, 0, 1, 1]))
+userList.push(new User("Weirdov2rse", [231, 5, 4, 0, 0, 0, 0, 1]))
 userList[userList.length - 1].addItems(0, 12) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 5)  // added 10/26/2018
 userList[userList.length - 1].addItems(0, 31) // sfsfsfsfsfsfs 10/31/2018
