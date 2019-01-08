@@ -114,7 +114,7 @@ userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
 userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList[userList.length - 1].addItems(0, 57) // ggggggggggggggggggggggggggggggggg 12/9/2018
 userList.push(new User("Denc", [211, 9, 0, 1, 0, 0, 1, 1]))
-userList.push(new User("Wedrov2rse", [231, 5, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("last seen on 396", [231, 5, 4, 0, 0, 0, 0, 1]))
 userList[userList.length - 1].addItems(0, 12) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 5)  // added 10/26/2018
 userList[userList.length - 1].addItems(0, 31) // sfsfsfsfsfsfs 10/31/2018
