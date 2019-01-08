@@ -8,7 +8,7 @@ Items are like this:
  0 items of ID 2 (bouquet)   (currency)
  1 item  of ID 3 (bragging point)*/ // [Currencies]
 var emojiImgs = true
-if (/vals=/.test(decodeURIComponent(document.cookie))) {
+if (/.*?vals=(.+?|.+?|.+?|.+?);.*/g.test(decodeURIComponent(document.cookie))) {
 	r = decodeURIComponent(document.cookie).replace(/.*?vals=(.+?|.+?|.+?|.+?);.*/g, "$1").split("|")
 	document.getElementById("sun").value = r[0]
 	document.getElementById("hib").value = r[1]
