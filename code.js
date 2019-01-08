@@ -9,7 +9,7 @@ Items are like this:
  1 item  of ID 3 (bragging point)*/ // [Currencies]
 var emojiImgs = true
 if (/vals=/.test(decodeURIComponent(document.cookie))) {
-	let r = decodeURIComponent(document.cookie).substring(decodeURIComponent(document.cookie).search(/vals=/), decodeURIComponent(document.cookie).search(/vals=/) + 5).split("|")
+	r = decodeURIComponent(document.cookie).substring(decodeURIComponent(document.cookie).search(/vals=/), decodeURIComponent(document.cookie).search(/vals=/) + 5).split("|")
 	document.getElementById("sun").value = +(r[0])
 	document.getElementById("hib").value = +(r[1])
 	document.getElementById("bou").value = +(r[2])
@@ -160,10 +160,10 @@ function UpdateScores() {
 		}
 	}
 	document.getElementById("scores").innerHTML = result[1].join("<br>")
-	let d = new Date();
+	d = new Date();
 	d.setTime(d.getTime() + (7 * 86400000))
-	document.cookie = "vals=" + [document.getElementById("sun").value,
-								 document.getElementById("hib").value,
-								 document.getElementById("bou").value,
-								 document.getElementById("emojiHandling").value].join("|") + "; expires=" + d.toUTCString() + "; path=/"
+	document.cookie = "vals=" + [document.getElementById("sun").value.toString(),
+								 document.getElementById("hib").value.toString(),
+								 document.getElementById("bou").value.toString(),
+								 document.getElementById("emojiHandling").value.toString()].join("|") + "; expires=" + d.toUTCString() + "; path=/"
 }
