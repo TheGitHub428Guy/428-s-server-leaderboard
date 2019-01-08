@@ -9,10 +9,10 @@ Items are like this:
  1 item  of ID 3 (bragging point)*/ // [Currencies]
 var emojiImgs = true
 if (/vals=/.test(decodeURIComponent(document.cookie))) {
-	r = decodeURIComponent(document.cookie).substring(decodeURIComponent(document.cookie).search(/vals=/), decodeURIComponent(document.cookie).search(/vals=/) + 5).split("|")
-	document.getElementById("sun").value = +(r[0])
-	document.getElementById("hib").value = +(r[1])
-	document.getElementById("bou").value = +(r[2])
+	r = decodeURIComponent(document.cookie).replace(/.*?vals=(.+?|.+?|.+?|.+?);.*/g, "$1").split("|")
+	document.getElementById("sun").value = r[0]
+	document.getElementById("hib").value = r[1]
+	document.getElementById("bou").value = r[2]
 	document.getElementById("emojiHandling").value = r[3]
 }
 const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
