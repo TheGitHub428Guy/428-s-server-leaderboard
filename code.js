@@ -8,6 +8,13 @@ Items are like this:
  0 items of ID 2 (bouquet)   (currency)
  1 item  of ID 3 (bragging point)*/ // [Currencies]
 var emojiImgs = true
+if (/vals=/.test(decodeURIComponent(document.cookie))) {
+	let r = decodeURIComponent(document.cookie).substring(decodeURIComponent(document.cookie).search(/vals=/), decodeURIComponent(document.cookie).search(/vals=/) + 5).split("|")
+	document.getElementById("sun").value = +(r[0])
+	document.getElementById("hib").value = +(r[1])
+	document.getElementById("bou").value = +(r[2])
+	document.getElementById("emojiHandling").value = r[3]
+}
 const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 			   "\ud83c\udf3a",   // hibiscus    [ID 1]
 			   "\ud83d\udc90",   // bouquet     [ID 2]
@@ -86,20 +93,20 @@ function User(username, items) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2250, 99, 17, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Reidolol", [2355, 99, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 228) // lol 11/9/2018 12/9/2018 12/16/2018
-userList.push(new User("Milo Jacquet", [2715, 83, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Milo Jacquet", [2748, 93, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 userList[userList.length - 1].addItems(0, 75) // +ed 11/9/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2563, 46, 9, 0, 1, 0])) // this is weirdoverse
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2564, 52, 9, 0, 1, 0])) // this is weirdoverse
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 78) // added 10/12/2018 & 12/16/2018
-userList[userList.length - 1].addItems(0, 31) // added 10/12/2018
+userList[userList.length - 1].addItems(0, 101) // added 10/12/2018 & 1/8/2019
 userList[userList.length - 1].addItems(0, 75) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 14) // added 10/26/2018 & 12/16/2018
 userList[userList.length - 1].addItems(0, 32) // added 10/31/2018
 userList[userList.length - 1].addItems(0, 73) // 11/9/2018
-userList.push(new User("Layle", [1407, 89, 6]))
+userList.push(new User("Layle", [1446, 89, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 79) // added 10/12/2018 and 11/9/2018
 userList[userList.length - 1].addItems(0, 129) // added 10/19/2018 and 11/26/2018 and 12/3/2018
@@ -153,4 +160,10 @@ function UpdateScores() {
 		}
 	}
 	document.getElementById("scores").innerHTML = result[1].join("<br>")
+	let d = new Date();
+	d.setTime(d.getTime() + (7 * 86400000))
+	document.cookie = "vals=" + [document.getElementById("sun").value,
+								 document.getElementById("hib").value,
+								 document.getElementById("bou").value,
+								 document.getElementById("emojiHandling").value].join("|") + "; expires=" + d.toUTCString() + "; path=/"
 }
