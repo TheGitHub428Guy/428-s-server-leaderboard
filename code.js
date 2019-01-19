@@ -7,7 +7,6 @@ Items are like this:
  5 items of ID 1 (hibiscus)  (currency)
  0 items of ID 2 (bouquet)   (currency)
  1 item  of ID 3 (bragging point)*/ // [Currencies]
-var emojiImgs = true
 if (/.*?vals=(.+?|.+?|.+?|.+?);.*/g.test(decodeURIComponent(document.cookie))) {
 	r = decodeURIComponent(document.cookie).replace(/.*?vals=(.+?|.+?|.+?|.+?);.*/g, "$1").split("|")
 	document.getElementById("sun").value = r[0]
@@ -47,11 +46,12 @@ const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 			   "&pmpkn", // Pumpkin [26]
 			   "\uD83C\uDF83" // SPOOKY Pumpkin [27]
 			   ]
-function FromKeywords(s) {
+function FromKeywords(s, e) {
 	let temp = s.replace("1 bragging points", "1 bragging point")
 				.replace("1 Joined before shop badges", "Joined before shop")
-	return ((document.getElementById("emojiHandling").value == "Images") ? temp.replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png>")
-						 :((document.getElementById("emojiHandling").value == "Text") ?
+	let f = function(a){return a.replace("alt=\"&emoji", "alt=\":what:").replace("alt=\"&pmpkn", "alt=\":pumpkin:").replace(/alt=\"&([^,\s"]+)/gm, "alt=\":5$1_:").replace(/alt=\":5(.)'_:/gm, "alt=\":5$1_m:")}
+	return ((e == "Images") ? f(temp.replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png alt=\"$1\">"))
+						 :((e == "Text") ?
 						 (temp.replace(/&([^,\s]+)/gm, "$1 Pentominoes")
 						 .replace(/(\D)1(\D+?)Pentominoes/gm, "$11$2Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02")).replace(/pmpkn Pentominoe?(s)?/gm, "Pumpkin$1").replace("1 Pumpkins", "1 Pumpkin")
 						:(temp.replace("&emoji", ":what:").replace("&pmpkn", ":pumpkin:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5(.)'_:/gm, ":5$1_m:"))))
@@ -87,7 +87,7 @@ function User(username, items, cRoles) {
 				j.push(this.items[i].toString() + " " + iList[i])
 			}
 		}
-		return "<span class=\"username " + this.cRoles.join(" ") + "\">@" + this.username + "</span> has " + FromKeywords(j.join(", ")) + " (" + this.flowerVal() + " flower val.)"
+		return "<span class=\"username " + this.cRoles.join(" ") + "\">@" + this.username + "</span> has " + FromKeywords(j.join(", "), document.getElementById("emojiHandling").value) + " (" + this.flowerVal() + " flower val.)"
 	}
 	this.greaterThan = function (other) {
 		return (this.flowerVal() > other.flowerVal())
