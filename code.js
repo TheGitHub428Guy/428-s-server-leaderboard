@@ -56,9 +56,10 @@ function FromKeywords(s) {
 						 .replace(/(\D)1(\D+?)Pentominoes/gm, "$11$2Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02")).replace(/pmpkn Pentominoe?(s)?/gm, "Pumpkin$1").replace("1 Pumpkins", "1 Pumpkin")
 						:(temp.replace("&emoji", ":what:").replace("&pmpkn", ":pumpkin:").replace(/&([^,\s]+)/gm, ":5$1_:").replace(/:5(.)'_:/gm, ":5$1_m:"))))
 }
-function User(username, items) {
+function User(username, items, cRoles) {
 	this.username = username
 	this.items = items
+	this.cRoles = cRoles
 	if (!((this.items) instanceof Array)) {
 		this.items = []
 	}
@@ -67,6 +68,9 @@ function User(username, items) {
 	} 
 	while (this.items.length > iList.length) {
 		this.items.pop()
+	}
+	if (!((this.cRoles) instanceof Array)) {
+		this.cRoles = []
 	}
 	this.flowerVal = function () {
 		return (this.items[0] * document.getElementById("sun").value) +
@@ -83,7 +87,7 @@ function User(username, items) {
 				j.push(this.items[i].toString() + " " + iList[i])
 			}
 		}
-		return "<span class=\"username\">@" + this.username + "</span> has " + FromKeywords(j.join(", ")) + " (" + this.flowerVal() + " flower val.)"
+		return "<span class=\"username " + this.cRoles.join(" ") + "\">@" + this.username + "</span> has " + FromKeywords(j.join(", ")) + " (" + this.flowerVal() + " flower val.)"
 	}
 	this.greaterThan = function (other) {
 		return (this.flowerVal() > other.flowerVal())
@@ -93,11 +97,11 @@ function User(username, items) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2355, 99, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Reidolol", [2502, 104, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], ["Violet",]))
 userList[userList.length - 1].addItems(0, 228) // lol 11/9/2018 12/9/2018 12/16/2018
-userList.push(new User("Milo Jacquet", [2748, 93, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+userList.push(new User("Milo Jacquet", [2864, 98, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ["Sky", "TL", "Conlangers"]))
 userList[userList.length - 1].addItems(0, 75) // +ed 11/9/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2564, 52, 9, 0, 1, 0])) // this is weirdoverse
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2660, 60, 9, 0, 1, 0], ["Purple",])) // this is weirdoverse
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 78) // added 10/12/2018 & 12/16/2018
@@ -106,15 +110,15 @@ userList[userList.length - 1].addItems(0, 75) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 14) // added 10/26/2018 & 12/16/2018
 userList[userList.length - 1].addItems(0, 32) // added 10/31/2018
 userList[userList.length - 1].addItems(0, 73) // 11/9/2018
-userList.push(new User("Layle", [1446, 89, 6]))
+userList.push(new User("Layle", [1503, 94, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 79) // added 10/12/2018 and 11/9/2018
 userList[userList.length - 1].addItems(0, 129) // added 10/19/2018 and 11/26/2018 and 12/3/2018
 userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
 userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList[userList.length - 1].addItems(0, 57) // ggggggggggggggggggggggggggggggggg 12/9/2018
-userList.push(new User("Denc", [211, 9, 0, 1, 0, 0, 1, 1]))
-userList.push(new User("last seen on 396", [231, 5, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("Denc", [211, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
+userList.push(new User("last seen on 396", [250, 5, 4, 0, 0, 0, 0, 1]))
 userList[userList.length - 1].addItems(0, 12) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 5)  // added 10/26/2018
 userList[userList.length - 1].addItems(0, 31) // sfsfsfsfsfsfs 10/31/2018

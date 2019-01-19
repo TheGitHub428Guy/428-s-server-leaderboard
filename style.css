@@ -9,6 +9,26 @@ input:hover,select:hover {background: #393939; box-shadow: 1px 1px 4px #000000}
 .emoji {height: 15px}
 .username {background-color: rgba(114, 137, 218, .1); color: #7289da; transition: 0.3s}
 .username:hover {background-color: rgba(114, 137, 218, .4); color: #c3ccef}
+
+/* ALL THE COLORED ROLES */
+.ded:hover {background-color: rgba(210, 210, 255, .2); color: #d2d2ff}
+.robet:hover {background-color: rgba(84, 110, 122, .2); color: #546e7a}
+.AIRHORN:hover {background-color: rgba(233, 30, 99, .2); color: #e91e63}
+.Conlangers:hover {background-color: rgba(26, 188, 156, .2); color: #1abc9c}
+.TL:hover {background-color: rgba(119, 119, 255, .2); color: #7777ff}
+.Bros:hover {background-color: rgba(241, 196, 15, .2); color: #f1c40f}
+.Mod:hover {background-color: rgba(35, 167, 66, .2); color: #23a742}
+.Admin:hover {background-color: rgba(24, 28, 139, .2); color: #181c8b}
+.Ocean:hover {background-color: rgba(32, 102, 148, .2); color: #206694}
+.Lake:hover {background-color: rgba(52, 152, 219, .2); color: #3498db}
+.Sky:hover {background-color: rgba(109, 234, 217, .2); color: #6dead9 /* hehe */ }
+.Grass:hover {background-color: rgba(46, 204, 113, .2); color: #2ecc71}
+.Forest:hover {background-color: rgba(31, 139, 76, .2); color: #1f8b4c}
+.GreenCyan:hover {background-color: rgba(26, 188, 156, .2); color: #1abc9c}
+.DarkGreenCyan:hover {background-color: rgba(17, 128, 106, .2); color: #11806a}
+.Purple:hover {background-color: rgba(120, 77, 255, .2); color: #784dff}
+.Violet:hover {background-color: rgba(170, 0, 255, .2); color: #aa00ff}
+
 #scores {line-height: normal}
 #small {font-size: 10px;}
 #htxt {padding-left: 1ch}
