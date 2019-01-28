@@ -97,11 +97,11 @@ function User(username, items, cRoles) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2502, 104, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], ["Violet",]))
+userList.push(new User("Reidolol", [2588, 108, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], ["Violet",]))
 userList[userList.length - 1].addItems(0, 228) // lol 11/9/2018 12/9/2018 12/16/2018
-userList.push(new User("Milo Jacquet", [2864, 98, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ["Sky", "TL", "Conlangers"]))
+userList.push(new User("Milo Jacquet", [2968, 98, 13, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ["Sky", "TL", "Conlangers"]))
 userList[userList.length - 1].addItems(0, 75) // +ed 11/9/2018
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2660, 60, 9, 0, 1, 0], ["Purple",])) // this is weirdoverse
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [2763, 68, 9, 0, 1, 0], ["Purple",])) // this is weirdoverse
 userList[userList.length - 1].addItems(20, 1)
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 78) // added 10/12/2018 & 12/16/2018
@@ -110,14 +110,14 @@ userList[userList.length - 1].addItems(0, 75) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 14) // added 10/26/2018 & 12/16/2018
 userList[userList.length - 1].addItems(0, 32) // added 10/31/2018
 userList[userList.length - 1].addItems(0, 73) // 11/9/2018
-userList.push(new User("Layle", [1503, 94, 6]))
+userList.push(new User("Layle", [1584, 94, 6]))
 userList[userList.length - 1].addItems(7, 1)
 userList[userList.length - 1].addItems(0, 79) // added 10/12/2018 and 11/9/2018
 userList[userList.length - 1].addItems(0, 129) // added 10/19/2018 and 11/26/2018 and 12/3/2018
 userList[userList.length - 1].addItems(0, 28) // added 10/26/2018
 userList[userList.length - 1].addItems(0, 27)  // askfghd 10/31/2018
 userList[userList.length - 1].addItems(0, 57) // ggggggggggggggggggggggggggggggggg 12/9/2018
-userList.push(new User("Denc", [211, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
+userList.push(new User("Denc", [223, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
 userList.push(new User("last seen on 396", [250, 5, 4, 0, 0, 0, 0, 1]))
 userList[userList.length - 1].addItems(0, 12) // added 10/26/2018
 userList[userList.length - 1].addItems(1, 5)  // added 10/26/2018
@@ -128,6 +128,7 @@ userList.push(new User("yes", [10, 5]))
 userList.push(new User("TWSICommunity", [10]))
 userList.push(new User("\u03C2\u03C3\u03C2\u03B1\u03B9\u03B7\u03B5 \u03C2\u03BF\u03BF\u03BA\u03B9\u03B5", [10])) // man i love escape sequences
 userList.push(new User("jk", [10]))
+userList.push(new User("ARLTON766MORT", [10])) // joined 1/21/2019
 
 // use userList[userList.length - 1].addItems(ID, number) under a user to add items
 function userSort (users) {
