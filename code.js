@@ -97,12 +97,12 @@ function User(username, items, cRoles) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2832, 117, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
-userList.push(new User("Milo Jacquet", [3074, 103, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145, 86, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
-userList.push(new User("Layle", [1951, 94, 6, 0, 0, 0, 0, 1]))
-userList.push(new User("Denc", [236, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
-userList.push(new User("last seen on 396", [293, 10, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("Reidolol", [2832+120, 117+5, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
+userList.push(new User("Milo Jacquet", [3074+66, 103+9, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98, 86+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
+userList.push(new User("Layle", [1951+63, 94+5, 6, 0, 0, 0, 0, 1]))
+userList.push(new User("Denc", [236+13, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
+userList.push(new User("last seen on 4c6", [293, 10, 4, 0, 0, 0, 0, 1]))
 //userList.push(new User("fabric", [113, 3])) // he left 11/9/2018 // yes i put a comment on a comment
 userList.push(new User("yes", [10, 5]))
 
@@ -112,6 +112,7 @@ userList.push(new User("jk", [10]))
 userList.push(new User("ARLTON766MORT", [10])) // joined 1/21/2019
 
 // use userList[userList.length - 1].addItems(ID, number) under a user to add items
+// actually no this is impractical just add to the flower count directly like x+y
 function userSort (users) {
 	let result = []
 	for (i = 0; result.length < users.length; i++) {
