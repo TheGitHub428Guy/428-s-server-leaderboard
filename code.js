@@ -6,7 +6,7 @@ Items are like this:
 40 items of ID 0 (sunflower) (currency)
  5 items of ID 1 (hibiscus)  (currency)
  0 items of ID 2 (bouquet)   (currency)
- 1 item  of ID 3 (bragging point)*/ // [Currencies]
+ 1 item  of ID 3 (bragging point)*/
 if (/.*?vals=(.+?|.+?|.+?|.+?);.*/g.test(decodeURIComponent(document.cookie))) {
 	r = decodeURIComponent(document.cookie).replace(/.*?vals=(.+?|.+?|.+?|.+?);.*/g, "$1").split("|")
 	document.getElementById("sun").value = r[0]
@@ -14,6 +14,7 @@ if (/.*?vals=(.+?|.+?|.+?|.+?);.*/g.test(decodeURIComponent(document.cookie))) {
 	document.getElementById("bou").value = r[2]
 	document.getElementById("emojiHandling").value = r[3]
 }
+ // [Currencies]
 const iList = ["\ud83c\udf3b",   // sunflower   [ID 0]
 			   "\ud83c\udf3a",   // hibiscus    [ID 1]
 			   "\ud83d\udc90",   // bouquet     [ID 2]
@@ -50,7 +51,7 @@ function FromKeywords(s, e) {
 	let temp = s.replace("1 bragging points", "1 bragging point")
 				.replace("1 Joined before shop badges", "Joined before shop")
 	let f = function(a){return a.replace("alt=\"&emoji", "alt=\":what:").replace("alt=\"&pmpkn", "alt=\":pumpkin:").replace(/alt=\"&([^,\s"]+)/gm, "alt=\":5$1_:").replace(/alt=\":5(.)'_:/gm, "alt=\":5$1_m:")}
-	return ((e == "Images") ? f(temp.replace(/(&[^,\s]+)/gm, "<img class=\"emoji\" src=$1.png alt=\"$1\">"))
+	return ((e == "Images") ? f(temp.replace(/(&[^,\s]+)/gm, function (e) {return("<img class=\"emoji\" src=" + e + ".png alt=\"" + e + "\" title=\"" + FromKeywords(e, "Sedgerdgdrdrgdrgdf") + "\">")}))
 						 :((e == "Text") ?
 						 (temp.replace(/&([^,\s]+)/gm, "$1 Pentominoes")
 						 .replace(/(\D)1(\D+?)Pentominoes/gm, "$11$2Pentomino").replace(/emoji Pentomino(es)?/gm, "\ud83d\ude02")).replace(/pmpkn Pentominoe?(s)?/gm, "Pumpkin$1").replace("1 Pumpkins", "1 Pumpkin")
@@ -97,12 +98,12 @@ function User(username, items, cRoles) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2832+120, 117+5, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
-userList.push(new User("Milo Jacquet", [3074+66, 103+9, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98, 86+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
-userList.push(new User("Layle", [1951+63, 94+5, 6, 0, 0, 0, 0, 1]))
-userList.push(new User("Denc", [236+13, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
-userList.push(new User("last seen on 4c6", [293, 10, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("Reidolol", [2832+120+261, 117+5+5, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
+userList.push(new User("Milo Jacquet", [3074+66+203, 103+9+4, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98+215, 86+8+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
+userList.push(new User("Layle", [1951+63+202, 94+15, 6, 0, 0, 0, 0, 1]))
+userList.push(new User("Denc", [236+13+5, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
+userList.push(new User("last seen on <span id=\"randhex\">yeet</span>", [293+40, 10, 4, 0, 0, 0, 0, 1]))
 //userList.push(new User("fabric", [113, 3])) // he left 11/9/2018 // yes i put a comment on a comment
 userList.push(new User("yes", [10, 5]))
 
@@ -154,3 +155,6 @@ function UpdateScores() {
 								 document.getElementById("bou").value.toString(),
 								 document.getElementById("emojiHandling").value.toString()].join("|") + "; expires=" + d.toUTCString() + "; path=/"
 }
+setInterval(function () { 
+	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16)
+}, 212)
