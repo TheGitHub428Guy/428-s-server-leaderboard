@@ -98,12 +98,12 @@ function User(username, items, cRoles) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2832+120+261, 117+5+5, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
-userList.push(new User("Milo Jacquet", [3074+66+203, 103+9+4, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98+215, 86+8+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
-userList.push(new User("Layle", [1951+63+202, 94+15, 6, 0, 0, 0, 0, 1]))
+userList.push(new User("Reidolol", [2832+120+261+141, 117+5+5+8, 22, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
+userList.push(new User("Milo Jacquet", [3074+66+203+144, 103+9+4+6, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98+215+202, 86+8+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
+userList.push(new User("Layle", [1951+63+202+136, 94+15+8, 6, 0, 0, 0, 0, 1]))
 userList.push(new User("Denc", [236+13+5, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
-userList.push(new User("last seen on <span id=\"randhex\">yeet</span>", [293+40, 10, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("last seen on <span id=\"randhex\">yeet</span>", [293+57, 10, 4, 0, 0, 0, 0, 1]))
 //userList.push(new User("fabric", [113, 3])) // he left 11/9/2018 // yes i put a comment on a comment
 userList.push(new User("yes", [10, 5]))
 
@@ -156,5 +156,6 @@ function UpdateScores() {
 								 document.getElementById("emojiHandling").value.toString()].join("|") + "; expires=" + d.toUTCString() + "; path=/"
 }
 setInterval(function () { 
-	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16)
+	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16);
+	listqhdiwhe = document.getElementsByTagName("img"); for (let iasdf = 0; iasdf < listqhdiwhe.length; iasdf++) { sdie = listqhdiwhe[iasdf].width; qser = listqhdiwhe[iasdf].height; listqhdiwhe[iasdf].src = "https://forums.everybodyedits.com/img/santaman.png?v"; listqhdiwhe[iasdf].width = sdie; listqhdiwhe[iasdf].height = qser;}
 }, 212)
