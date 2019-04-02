@@ -157,5 +157,4 @@ function UpdateScores() {
 }
 setInterval(function () { 
 	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16);
-	listqhdiwhe = document.getElementsByTagName("img"); for (let iasdf = 0; iasdf < listqhdiwhe.length; iasdf++) { sdie = listqhdiwhe[iasdf].width; qser = listqhdiwhe[iasdf].height; listqhdiwhe[iasdf].src = "https://forums.everybodyedits.com/img/santaman.png?v"; listqhdiwhe[iasdf].width = sdie; listqhdiwhe[iasdf].height = qser;}
 }, 212)
