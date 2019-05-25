@@ -98,12 +98,12 @@ function User(username, items, cRoles) {
 	}
 }
 var userList = []
-userList.push(new User("Reidolol", [2832+120+261+141+315, 117+15+8, 26, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
-userList.push(new User("Milo Jacquet", [3074+66+203+144+89+118, 103+9+4+6+9, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
-userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98+215+202+133+218, 86+8+8+13, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
-userList.push(new User("Layle", [1951+63+202+136+69+94, 94+15+8, 6, 0, 0, 0, 0, 1]))
+userList.push(new User("Reidolol", [2832+120+261+141+315+217, 117+15+8+18, 29, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Violet",]))
+userList.push(new User("Milo Jacquet", [3074+66+203+144+89+118+174, 103+9+4+6+9+16, 13, 0, 0, 0, 0, 1], ["Sky", "TL", "Conlangers"]))
+userList.push(new User("\u0E56\u0336\u0336\u0336\u03B6\u035C\u0361W\uD835\uDD56\uD835\uDD5A\uD835\uDD63\uD835\uDD55\uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63\uD835\uDD64\uD835\uDD56", [3145+98+215+202+133+218+266, 86+8+8+13+8, 9, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], ["Purple",])) // this is weirdoverse
+userList.push(new User("Layle", [1951+63+202+136+69+94+149, 94+15+8, 6, 0, 0, 0, 0, 1]))
 userList.push(new User("Denc", [254+28, 9, 0, 1, 0, 0, 1, 1], ["Mod", "Bros"]))
-userList.push(new User("last seen on <span id=\"randhex\">yeet</span>", [293+57+21, 10, 4, 0, 0, 0, 0, 1]))
+userList.push(new User("last seen <span id=\"onsince\">since</span> <span id=\"randhex\">yeet</span>", [293+57+21+73, 10, 4, 0, 0, 0, 0, 1]))
 //userList.push(new User("fabric", [113, 3])) // he left 11/9/2018 // yes i put a comment on a comment
 userList.push(new User("yes", [10, 5]))
 
@@ -155,6 +155,11 @@ function UpdateScores() {
 								 document.getElementById("bou").value.toString(),
 								 document.getElementById("emojiHandling").value.toString()].join("|") + "; expires=" + d.toUTCString() + "; path=/"
 }
-setInterval(function () { 
-	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16);
-}, 212)
+var asdfgj = 0;
+setTimeout(function jfgdkl () { 
+	asdfgj += Math.random() * 2;
+	asdfgj = asdfgj % 10;
+	document.getElementById("randhex").innerHTML = (Math.floor((Math.random()*3840)+256)).toString(16) + ((asdfgj > 5) ? ("&nbsp;&nbsp;&nbsp;") : (""));
+	document.getElementById("onsince").innerHTML = ((asdfgj <= 5) ? ("since") : ("on"));
+	setTimeout(jfgdkl, Math.random() * 212)
+}, 103)
