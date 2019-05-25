@@ -4,7 +4,6 @@ button {background: #7088df; border-color: #7088df; border-radius: 8px; cursor: 
 button:hover {background: #7890e7; box-shadow: 1px 1px 4px}
 input,select {background: #292929; color: #FFFFFF; border-width: 1px; border-color: #494949; border-style: solid; transition: 0.3s}
 input:hover,select:hover {background: #393939; box-shadow: 1px 1px 4px #000000}
-/*input:focus,select:focus {background: #292929 !important; box-shadow: none !important}*/
 .ftxt {display: inline}
 .emoji {height: 15px; transition: 0.7s; transition-timing-function: ease-out;}
 .emoji:hover {transform: scale(3, 3)}
@@ -30,7 +29,7 @@ input:hover,select:hover {background: #393939; box-shadow: 1px 1px 4px #000000}
 .Purple:hover {background-color: rgba(120, 77, 255, .2); color: #784dff}
 .Violet:hover {background-color: rgba(170, 0, 255, .2); color: #aa00ff}
 
-#scores {line-height: normal}
+#scores {line-height: normal; white-space:pre;}
 #small {font-size: 10px;}
 #htxt {padding-left: 1ch}
 #btxt {padding-left: 2ch}
